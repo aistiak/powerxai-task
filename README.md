@@ -27,21 +27,21 @@ would also adress the "Additional Considerations"
 
 ## Additional Considerations
 
-__How can we test the code to be confident in the implementation?__
+_How can we test the code to be confident in the implementation?_
 
 By writing tests , could write unit test with `jest` and api test with `supertest`
 
-__How can we make sure this code is easy to maintain for future developers?__
+_How can we make sure this code is easy to maintain for future developers?_
 
 - could write api documentation or implementing swagger 
 - writing tests , as reading tests tend to give a better understanding of what the code is supposed to do 
 
-__Our API needs to be high-performance — how can we measure the performance of our API?__
+_Our API needs to be high-performance — how can we measure the performance of our API?_
 
 - by monitoring api with tools such as datadog , ELK stack or solutions similar to those analyzing perfomance metrics and alert 
  
 
-__How could we optimise this code if the API receives many more POST requests than GET requests? What about if the API receives many more GET requests than POST requests?__
+_How could we optimise this code if the API receives many more POST requests than GET requests? What about if the API receives many more GET requests than POST requests?_
 
 if receives more POST request 
 - could try to optimize the parsing logic to make it faster 
@@ -50,7 +50,7 @@ if receives more GET request
 - could add cachng to reduce load on server and imporve response time 
 - improve `Power` metric calculation 
 
-__Would any of this logic need to change to scale to millions of simultaneous connections?__
+_Would any of this logic need to change to scale to millions of simultaneous connections?_
 
 I think not , since this is a stateless app could just containerize it and put it in a container orchestration tools like k8s or aws ECS 
 
